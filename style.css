@@ -1,0 +1,157 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+html {
+  font-size: 10px;
+  margin: 10vh 0 0
+}
+
+@media only screen and (max-width:650px) {
+  html {
+    margin: 30px 0 0;
+    font-size: 9px
+  }
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: Cabin, sans-serif;
+  letter-spacing: .1rem;
+  line-height: 2.6rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+#app {
+  width: 80vw
+}
+
+@media only screen and (max-width:650px) {
+  #app {
+    width: 95vw
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none
+}
+
+a:hover {
+  font-style: italic
+}
+
+a:after {
+  content: " >";
+  padding-left: .5rem
+}
+
+.loading #background,
+.loading #logo,
+.loading section,
+.loading ul {
+  opacity: 0;
+}
+
+#logo,
+#background,
+section,
+ul {
+  opacity: 1;
+  transition: 1s linear opacity;
+}
+
+/* #logo {
+  transition-delay: 1s;
+} */
+
+section ~ ul {
+  transition-delay: 0.5s;
+}
+
+#background {
+  transition-delay: 1.5s;
+}
+
+#background {
+  position: fixed;
+  bottom: 100px;
+  right: 4vw;
+  width: 50vw;
+  z-index: -1;
+}
+
+@media only screen and (max-width:650px) {
+  #background {
+    display: none
+  }
+}
+
+main {
+  border: 1px solid transparent;
+  width: 400px
+}
+
+@media only screen and (max-width:650px) {
+  main {
+    width: 100%
+  }
+}
+
+section {
+  position: relative;
+}
+
+section h1,
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1
+}
+
+section h1 {
+  display: none
+}
+
+section img {
+  background-size: cover;
+  width: 100%
+}
+
+ul {
+  width: 360px;
+  padding: 1rem;
+  margin: 210px 0 100px;
+  /* -webkit-transition: opacity .8s linear .4s;
+  -o-transition: .8s linear opacity .4s;
+  transition: opacity .8s linear .4s */
+}
+
+ul li {
+  list-style-type: none;
+  font-size: 2rem
+}
+
+ul li:before {
+  content: "\2015   ";
+  padding-right: 1rem
+}
+
+ul li:first-child {
+  margin-bottom: 30px
+}
+
+@media only screen and (max-width:650px) {
+  ul {
+    margin-top: 48.9418vw;
+    width: 100%
+  }
+}
